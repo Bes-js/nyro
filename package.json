@@ -1,0 +1,69 @@
+{
+  "name": "nyro",
+  "version": "0.0.1",
+  "main": "./dist/index.js",
+  "description": "A simple and effective promise-based HTTP request library that supports all HTTP methods.",
+  "exports": {
+    ".": {
+      "types": {
+        "require": "./dist/index.d.ts",
+        "default": "./dist/index.d.mts"
+      },
+      "default": {
+        "require": "./dist/index.js",
+        "default": "./dist/index.mjs"
+      }
+    }
+  },
+  "scripts": {
+    "build": "tsup"
+  },
+  "keywords": [
+    "http",
+    "https",
+    "request",
+    "response",
+    "proxy",
+    "agent",
+    "http-proxy-agent",
+    "https-proxy-agent",
+    "get",
+    "post",
+    "put",
+    "delete",
+    "head",
+    "options",
+    "trace",
+    "connect",
+    "patch",
+    "request-promise",
+    "request-promise-native",
+    "promise"
+  ],
+  "author": {
+    "name": "Bes-js",
+    "url": "https://github.com/Bes-js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Bes-js/nyro.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Bes-js/nyro/issues"
+  },
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/sponsors/Bes-js"
+  },
+  "license": "LGPL-3.0-or-later",
+  "devDependencies": {
+    "ts-node": "^10.9.2",
+    "tsup": "^8.3.0"
+  },
+  "dependencies": {
+    "http": "^0.0.1-security",
+    "http-proxy-agent": "^7.0.2",
+    "https": "^1.0.0",
+    "https-proxy-agent": "^7.0.5"
+  }
+}

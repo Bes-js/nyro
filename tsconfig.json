@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "incremental": true,
+    "allowJs": true,
+    "target": "ES6",
+    "module": "CommonJS",                        
+    "outDir": "./build",                        
+    "rootDir": "./",                  
+    "strict": true,                           
+    "esModuleInterop": true,                
+    "skipLibCheck": true,
+    "resolveJsonModule": false,
+    "forceConsistentCasingInFileNames": true,
+    "tsBuildInfoFile": ".tsbuildinfo"
+  },
+  "include": ["src/*", "src/*/*","src/**/*/*","./src/**/*","src/*/*/*","src/*/*/*/*"],
+  "exclude": ["node_modules", "**/*.spec.ts"]
+}
