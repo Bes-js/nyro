@@ -1,21 +1,13 @@
 {
   "name": "nyro",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "main": "./dist/index.js",
-  "description": "A simple and effective promise-based HTTP request library that supports all HTTP methods.",
-  "exports": {
-    ".": {
-      "types": {
-        "require": "./dist/index.d.ts",
-        "default": "./dist/index.d.mts"
-      },
-      "default": {
-        "require": "./dist/index.js",
-        "default": "./dist/index.mjs"
-      }
-    }
-  },
+  "types": "./dist/index.d.ts",
+  "typings": "./dist/index.d.ts",
+  "module": "./dist/index.mjs",
+  "description": "A simple and effective promise-based HTTP & HTTP/2 request library that supports all HTTP methods.",
   "scripts": {
+    "test": "ts-node test.ts",
     "build": "tsup"
   },
   "keywords": [
@@ -24,6 +16,7 @@
     "request",
     "response",
     "proxy",
+    "fastgate",
     "agent",
     "http-proxy-agent",
     "https-proxy-agent",
@@ -36,14 +29,47 @@
     "trace",
     "connect",
     "patch",
+    "promise",
+    "got",
+    "url",
+    "uri",
+    "simple",
+    "curl",
+    "wget",
     "request-promise",
     "request-promise-native",
-    "promise"
+    "net",
+    "network",
+    "gzip",
+    "node-fetch",
+    "fetch",
+    "ky",
+    "requests",
+    "human-friendly",
+    "axios",
+    "superagent",
+    "hercai",
+    "proxy-agent",
+    "http-proxy",
+    "https-proxy",
+    "http-proxy-agent",
+    "https-proxy-agent",
+    "socks-proxy-agent",
+    "http2",
+    "http2-wrapper",
+    "http2-agent",
+    "http2-proxy-agent",
+    "user-agent",
+    "cookie",
+    "cookies",
+    "user-agent-generator",
+    "layer7"
   ],
   "author": {
     "name": "Bes-js",
     "url": "https://github.com/Bes-js"
   },
+  "homepage": "https://github.com/Bes-js/nyro",
   "repository": {
     "type": "git",
     "url": "https://github.com/Bes-js/nyro.git"
@@ -61,9 +87,12 @@
     "tsup": "^8.3.0"
   },
   "dependencies": {
+    "fastgate": "^6.1.0",
     "http": "^0.0.1-security",
     "http-proxy-agent": "^7.0.2",
+    "http2-wrapper": "^2.2.1",
     "https": "^1.0.0",
-    "https-proxy-agent": "^7.0.5"
+    "https-proxy-agent": "^7.0.5",
+    "socks-proxy-agent": "^8.0.4"
   }
 }

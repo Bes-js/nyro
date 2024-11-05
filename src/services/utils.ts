@@ -1,3 +1,5 @@
+import packageJson from '../../package.json'; 
+
 /**
  * @file Utility functions for handling HTTP responses and system information.
  */
@@ -24,7 +26,7 @@ export function getReusedSocket(res: any): boolean | undefined {
 export function getServerIp(res: IncomingMessage): string | undefined {
     const socket = res?.socket || res?.connection;
     return socket ? socket.remoteAddress : undefined;
-}
+};
 
 /**
  * Generates a default User-Agent string based on the current system's platform, architecture, and Node.js version.
@@ -36,5 +38,15 @@ export function getDefaultUserAgent(): string {
     const arch = os.arch();
     const nodeVersion = process.version;
 
-    return `Nyro/0.0.1 (${platform}; ${arch} ${nodeVersion})`;
-}
+    return `Nyro/${packageJson.version} (${platform}; ${arch} ${nodeVersion})`;
+};
+
+/**
+ * Generates a unique ID based on the current timestamp and a random number.
+ * 
+ * @returns A unique ID string.
+ * @example generateUniqueId() // 'id-1633456789000-123456'
+ */
+export function generateUniqueId(): string {
+    return 'nyro-' + Date.now() + '-' + Math.floor(Math.random() * 1000000);
+};

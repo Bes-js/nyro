@@ -4,6 +4,80 @@
  */
 
 
+ export interface Headers {
+  'User-Agent'?: string;
+  'Response-Type'?: string;
+  'Content-Encoding'?: string;
+  'Content-Length'?: string;
+  'Content-Range'?: string;
+  'Content-Type'?: string;
+  'Authorization'?: string;
+  'Accept'?: string;
+  'Accept-Encoding'?: string;
+  'Accept-Language'?: string;
+  'Cache-Control'?: string;
+  'Connection'?: string;
+  'Cookie'?: string;
+  'DNT'?: string;
+  'Host'?: string;
+  'Origin'?: string;
+  'Pragma'?: string;
+  'Referer'?: string;
+  'TE'?: string;
+  'Upgrade-Insecure-Requests'?: string;
+  'Via'?: string;
+  'Warning'?: string;
+  'X-Requested-With'?: string;
+  'X-Forwarded-For'?: string;
+  'X-Forwarded-Host'?: string;
+  'X-Forwarded-Proto'?: string;
+  'Front-End-Https'?: string;
+  'X-Http-Method-Override'?: string;
+  'X-ATT-DeviceId'?: string;
+  'X-Wap-Profile'?: string;
+  'Proxy-Connection'?: string;
+  'X-UIDH'?: string;
+  'X-Csrf-Token'?: string;
+  'X-Request-ID'?: string;
+  'X-Correlation-ID'?: string;
+  'X-DeviceUserAgent'?: string;
+  'X-Device-ID'?: string;
+  'X-Device-OS'?: string;
+  'X-Device-OS-Version'?: string;
+  'X-Device-Model'?: string;
+  'X-Device-Brand'?: string;
+  'X-Device-Name'?: string;
+  'X-Device-Carrier'?: string;
+  'X-Device-Country'?: string;
+  'X-Device-Locale'?: string;
+  'X-Device-App'?: string;
+  'X-Device-App-Version'?: string;
+  'X-Device-App-Name'?: string;
+  'X-Device-App-Installer'?: string;
+  'X-Device-App-Install-Time'?: string;
+  'X-Device-App-Update-Time'?: string;
+  'X-Device-App-Store'?: string;
+  'X-Device-App-Store-Version'?: string;
+  'X-Device-App-Store-Name'?: string;
+};
+
+
+ export type UserAgentDevice = ('SM-T210' | 'SM-G900F' | 'SM-G920F' | 'SM-G930F' | 'SM-G950F' | 'SM-G960F' | 'SM-G970F' | 'SM-G973F' | 'SM-G975F' | 'SM-G980F' | 'SM-G985F' | 'SM-G988B' | 'SM-N9005' | 'SM-N910F' | 'SM-N920C' | 'SM-N950F' | 'SM-N960F' | 'SM-N970F' | 'SM-N975F' | 'SM-N980F' | 'SM-N985F' | 'SM-N986B' | 'iPhone' | 'iPad' | 'iPod touch' | 'Nexus 5' | 'Nexus 7' | 'Nexus 10' | 'Nexus 4' | 'Nexus 6' | 'Nexus 9' | 'Nexus 5X' | 'Nexus 6P' | 'Nexus 7 (2013)' | 'Nexus 9 (2014)' | 'Nexus 10 (2012)' | 'Nexus 4 (2012)' | 'Nexus 6 (2014)' | 'Nexus 5X (2015)' | 'Nexus 6P (2015)' | 'Mi 9' | 'Mi 9 SE' | 'Mi 9T' | 'Mi 9T Pro' | 'Mi 10' | 'Mi 10 Pro' | 'Mi 10T' | 'Mi 10T Pro' | 'Mi 11' | 'Mi 11 Lite' | 'Mi 11 Ultra' | 'Redmi Note 8' | 'Redmi Note 8 Pro' | 'Redmi Note 9' | 'Redmi Note 9 Pro' | 'Redmi Note 10' | 'Redmi Note 10 Pro' | 'Redmi Note 11' | 'Redmi Note 11 Pro' | 'Poco F1' | 'Poco F2 Pro' | 'Poco X3' | 'Poco X3 Pro' | 'Poco M3' | 'Poco M3 Pro' & Record<string,string>);
+
+ export type UserAgentOS = ('Windows' | 'Mac OS' | 'Linux' | 'Android' | 'iOS' & string);
+
+ export type UserAgentBrowser = ('Chrome' | 'Firefox' | 'Safari' | 'Opera' | 'Edge' | 'IE' & Record<string,string>);
+
+
+ export interface GenerateUserAgentOptions {
+    browser?: (UserAgentBrowser & string);
+    version?: string;
+    os?: (UserAgentOS & string);
+    device?: (UserAgentDevice);
+ };
+
+
+
 /**
  * @enum {string} Method
  * @description Enum representing HTTP methods.
@@ -195,6 +269,7 @@
     Unused = 306,
     TemporaryRedirect = 307,
     PermanentRedirect = 308,
+    TooManyRedirects = 310,
     BadRequest = 400,
     Unauthorized = 401,
     PaymentRequired = 402,

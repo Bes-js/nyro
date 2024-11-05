@@ -9,10 +9,10 @@
     "strict": true,                           
     "esModuleInterop": true,                
     "skipLibCheck": true,
-    "resolveJsonModule": false,
+    "resolveJsonModule": true,
     "forceConsistentCasingInFileNames": true,
     "tsBuildInfoFile": ".tsbuildinfo"
   },
   "include": ["src/*", "src/*/*","src/**/*/*","./src/**/*","src/*/*/*","src/*/*/*/*"],
-  "exclude": ["node_modules", "**/*.spec.ts"]
+  "exclude": ["node_modules", "build", "**/*.spec.ts"]
 }
