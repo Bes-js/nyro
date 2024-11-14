@@ -1,18 +1,14 @@
 {
   "compilerOptions": {
-    "incremental": true,
-    "allowJs": true,
-    "target": "ES6",
-    "module": "CommonJS",                        
-    "outDir": "./build",                        
-    "rootDir": "./",                  
-    "strict": true,                           
-    "esModuleInterop": true,                
-    "skipLibCheck": true,
+    "module": "NodeNext",
+    "target": "ESNext",
+    "esModuleInterop": true,
     "resolveJsonModule": true,
-    "forceConsistentCasingInFileNames": true,
-    "tsBuildInfoFile": ".tsbuildinfo"
-  },
-  "include": ["src/*", "src/*/*","src/**/*/*","./src/**/*","src/*/*/*","src/*/*/*/*"],
-  "exclude": ["node_modules", "build", "**/*.spec.ts"]
+    "outDir": "./dist",
+    "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true,
+    "declaration": true,
+    "allowJs": true,
+    "strict": true  
+  }
 }
